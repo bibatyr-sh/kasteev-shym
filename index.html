@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Колледж искусств и дизайна имени А. Кастеева — Шымкент</title>
+<meta name="description" content="ГККП «Колледж искусств и дизайна имени А. Кастеева» в Шымкенте: специальности, новости, поступление, контакты.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script src="https://cdn.jsdelivr.net/npm/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script>
+  /* Цвета и шрифт проекта: меняйте здесь */
+  tailwind.config = { theme: { extend: {
+    colors: { ink: '#0B0F17', night: '#0F172A', gold: '#C5A059', gold2: '#D4AF37' },
+    fontFamily: { sans: ['Inter', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'sans-serif'] }
+  } } };
+</script>
+<style>
+  :root{color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+  html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 84px)}
+  body{background:#0B0F17}
+  .wrap{width:min(72rem,100% - 2.5rem);margin-inline:auto}
+  .glass{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
+  .noscroll{scrollbar-width:none}.noscroll::-webkit-scrollbar{display:none}
+  .dot{height:8px;width:8px;border-radius:9999px;background:rgba(255,255,255,.3);transition:width .3s,background .3s}
+  .dot[aria-current=true]{width:32px;background:#C5A059}
+  .orb{position:absolute;border-radius:9999px;filter:blur(80px);animation:drift 18s ease-in-out infinite alternate}
+  @keyframes drift{to{transform:translate3d(6%,8%,0) scale(1.15)}}
+  @keyframes pop{from{opacity:0;transform:translateY(16px) scale(.97)}}
+  dialog[open]{animation:pop .3s ease}
+  :focus-visible{outline:2px solid #D4AF37;outline-offset:3px}
+  @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body class="bg-ink font-sans text-slate-100 antialiased">
+
+<!-- ===== Header ===== -->
+<header class="glass sticky z-30 rounded-none border-x-0 border-t-0" style="top:env(safe-area-inset-top,0px);background:rgba(11,15,23,.75)">
+  <div class="wrap relative flex h-[4.5rem] items-center justify-between">
+    <a href="#top" class="flex items-center gap-3" aria-label="Колледж им. А. Кастеева — на главную">
+      <!-- Заглушка эмблемы: замените на настоящий логотип -->
+      <svg viewBox="0 0 40 40" class="h-11 w-11 shrink-0" aria-hidden="true"><circle cx="20" cy="20" r="18.5" fill="#0F172A" stroke="#C5A059" stroke-width="2"/><path d="M14.5 11v18M14.5 20.500l9.500-9M17.500 17l7.500 12" stroke="#D4AF37" stroke-width="2.400" stroke-linecap="round" fill="none"/></svg>
+      <span class="text-sm font-bold leading-tight">Колледж искусств<br>и дизайна им. А. Кастеева</span>
+    </a>
+    <nav id="nav" class="absolute inset-x-0 top-full hidden flex-col gap-1 border-b border-white/10 bg-ink/95 px-5 pb-6 pt-3 md:static md:flex md:flex-row md:items-center md:gap-7 md:border-0 md:bg-transparent md:p-0" aria-label="Основное меню">
+      <a class="py-2 text-slate-300 hover:text-gold2 md:py-0 md:text-sm" href="#about">О колледже</a>
+      <a class="py-2 text-slate-300 hover:text-gold2 md:py-0 md:text-sm" href="#news">Новости</a>
+      <a class="py-2 text-slate-300 hover:text-gold2 md:py-0 md:text-sm" href="#majors">Специальности</a>
+      <a class="py-2 text-slate-300 hover:text-gold2 md:py-0 md:text-sm" href="#admissions">Абитуриенту</a>
+      <a class="py-2 text-slate-300 hover:text-gold2 md:py-0 md:text-sm" href="#contacts">Контакты</a>
+      <button data-open class="mt-2 rounded-full bg-gradient-to-r from-gold to-gold2 px-6 py-2.5 text-sm font-bold text-ink transition hover:brightness-110 md:mt-0">Подать заявку</button>
+    </nav>
+    <button id="burger" class="grid h-11 w-11 place-items-center md:hidden" aria-label="Меню" aria-expanded="false" aria-controls="nav"><i data-lucide="menu"></i></button>
+  </div>
+</header>
+
+<main id="top">
+<!-- ===== Hero: автослайдер (3 секунды) ===== -->
+<section id="hero" class="relative overflow-hidden py-16 sm:py-24" aria-roledescription="carousel" aria-label="Главные баннеры">
+  <div class="orb -left-24 -top-24 h-96 w-96 bg-gold/40"></div>
+  <div class="orb -right-24 top-1/4 h-96 w-96 bg-indigo-500/35" style="animation-delay:-6s"></div>
+  <div class="orb bottom-0 left-1/3 h-72 w-72 bg-rose-500/25" style="animation-delay:-11s"></div>
+  <div class="wrap relative">
+    <div id="slides" class="grid min-h-[26rem] sm:min-h-[24rem]"></div>
+    <div class="mt-10 flex items-center gap-4">
+      <button id="prev" class="glass grid h-11 w-11 place-items-center rounded-full hover:border-gold" aria-label="Предыдущий слайд"><i data-lucide="arrow-left" class="h-5 w-5"></i></button>
+      <button id="next" class="glass grid h-11 w-11 place-items-center rounded-full hover:border-gold" aria-label="Следующий слайд"><i data-lucide="arrow-right" class="h-5 w-5"></i></button>
+      <div id="dots" class="ml-2 flex items-center gap-2"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Новости: карусель ===== -->
+<section id="news" class="py-20 sm:py-28">
+  <div class="wrap">
+    <div class="flex items-end justify-between gap-4">
+      <div><h2 class="text-3xl font-extrabold sm:text-4xl">Новости и события</h2><p class="mt-3 max-w-xl text-slate-400">Выставки, конкурсы и анонсы колледжа.</p></div>
+      <div class="flex gap-2">
+        <button id="nprev" class="glass grid h-11 w-11 place-items-center rounded-full hover:border-gold" aria-label="Назад"><i data-lucide="chevron-left"></i></button>
+        <button id="nnext" class="glass grid h-11 w-11 place-items-center rounded-full hover:border-gold" aria-label="Вперёд"><i data-lucide="chevron-right"></i></button>
+      </div>
+    </div>
+    <div id="track" class="noscroll -mr-4 mt-10 flex snap-x snap-mandatory overflow-x-auto scroll-smooth"></div>
+    <div id="ndots" class="mt-6 flex justify-center gap-2"></div>
+  </div>
+</section>
+
+<!-- ===== О колледже ===== -->
+<section id="about" class="bg-night/60 py-20 sm:py-28">
+  <div class="wrap grid gap-12 lg:grid-cols-2 lg:items-center">
+    <div>
+      <h2 class="text-3xl font-extrabold sm:text-4xl">О колледже</h2>
+      <p class="mt-5 text-slate-300">За более чем пятьдесят лет колледж выпустил тысячи специалистов творческих профессий. Наша миссия — сохранять академическую школу рисунка и живописи и давать студентам свободу современного творческого поиска.</p>
+      <p class="mt-4 text-slate-400">ГККП — государственное коммунальное казённое предприятие: обучение доступно по государственному гранту и по договору.</p>
+    </div>
+    <div id="stats" class="grid grid-cols-2 gap-4"></div>
+  </div>
+</section>
+
+<!-- ===== Специальности ===== -->
+<section id="majors" class="py-20 sm:py-28">
+  <div class="wrap">
+    <h2 class="text-3xl font-extrabold sm:text-4xl">Специальности</h2>
+    <p class="mt-3 max-w-xl text-slate-400">Пять направлений — выберите то, где хочется делать вещи своими руками.</p>
+    <div id="majorGrid" class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3"></div>
+  </div>
+</section>
+
+<!-- ===== Абитуриенту ===== -->
+<section id="admissions" class="bg-night/60 py-20 sm:py-28">
+  <div class="wrap">
+    <h2 class="text-3xl font-extrabold sm:text-4xl">Абитуриенту</h2>
+    <div id="steps" class="mt-10 grid items-stretch gap-4 md:grid-cols-[1fr_auto_1fr_auto_1fr]"></div>
+    <div class="mt-8 grid gap-5 md:grid-cols-2">
+      <div class="glass rounded-3xl p-6">
+        <h3 class="flex items-center gap-2 text-lg font-bold"><i data-lucide="file-text" class="h-5 w-5 text-gold"></i>Необходимые документы</h3>
+        <ul class="mt-4 list-disc space-y-1.5 pl-5 text-slate-300 marker:text-gold">
+          <li>Заявление о приёме</li><li>Удостоверение личности (копия)</li><li>Документ об образовании (оригинал)</li><li>Медицинская справка</li><li>Фотографии 3×4</li><li>Портфолио творческих работ</li>
+        </ul>
+      </div>
+      <div class="glass rounded-3xl p-6">
+        <h3 class="flex items-center gap-2 text-lg font-bold"><i data-lucide="calendar-days" class="h-5 w-5 text-gold"></i>Ключевые даты</h3>
+        <ul class="mt-4 space-y-3 text-slate-300">
+          <li><b class="text-white">Приём документов:</b> летом, перед началом учебного года</li>
+          <li><b class="text-white">Творческий экзамен:</b> после окончания приёма документов</li>
+          <li><b class="text-white">Зачисление:</b> по итогам экзамена</li>
+        </ul>
+        <p class="mt-4 text-sm text-slate-400">Точные даты и перечень документов уточняйте по телефонам приёмной комиссии.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Преимущества и мастерские ===== -->
+<section id="benefits" class="py-20 sm:py-28">
+  <div class="wrap">
+    <h2 class="text-3xl font-extrabold sm:text-4xl">Преимущества и мастерские</h2>
+    <div id="advGrid" class="mt-10 grid gap-5 md:grid-cols-3"></div>
+  </div>
+</section>
+
+<!-- ===== Контакты и карта ===== -->
+<section id="contacts" class="bg-night/60 py-20 sm:py-28">
+  <div class="wrap">
+    <h2 class="text-3xl font-extrabold sm:text-4xl">Контакты</h2>
+    <div class="mt-10 grid gap-5 lg:grid-cols-2">
+      <div class="glass space-y-6 rounded-3xl p-6">
+        <div class="flex gap-4"><i data-lucide="map-pin" class="mt-1 h-5 w-5 shrink-0 text-gold"></i><div><p class="text-sm text-slate-400">Адрес</p>г. Шымкент, ул. Кастеева, 7А</div></div>
+        <div class="flex gap-4"><i data-lucide="phone" class="mt-1 h-5 w-5 shrink-0 text-gold"></i><div><p class="text-sm text-slate-400">Телефоны</p><a class="hover:text-gold2" href="tel:+77252563112">+7 (7252) 56-31-12</a><br><a class="hover:text-gold2" href="tel:+77252562915">+7 (7252) 56-29-15</a></div></div>
+        <div class="flex gap-4"><i data-lucide="instagram" class="mt-1 h-5 w-5 shrink-0 text-gold"></i><div><p class="text-sm text-slate-400">Instagram</p><a class="hover:text-gold2" href="https://instagram.com/shhk.kasteev" target="_blank" rel="noopener">@shhk.kasteev</a></div></div>
+        <!-- Заглушка карты: замените на встроенную карту при необходимости -->
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=%D0%A8%D1%8B%D0%BC%D0%BA%D0%B5%D0%BD%D1%82%2C%20%D1%83%D0%BB.%20%D0%9A%D0%B0%D1%81%D1%82%D0%B5%D0%B5%D0%B2%D0%B0%2C%207%D0%90" target="_blank" rel="noopener" class="relative grid min-h-[11rem] place-items-center overflow-hidden rounded-2xl border border-white/10 text-center" style="background:radial-gradient(circle at 30% 30%,rgba(197,160,89,.3),transparent 55%),linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px) 0 0/40px 40px,linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px) 0 0/40px 40px,#0F172A" aria-label="Открыть адрес в Google Картах">
+          <span class="grid justify-items-center gap-2"><i data-lucide="map-pin" class="h-9 w-9 text-gold2"></i><span class="text-sm text-slate-300">ул. Кастеева, 7А — открыть на карте</span></span>
+        </a>
+      </div>
+      <div class="glass rounded-3xl p-6"><h3 class="mb-4 text-lg font-bold">Написать в колледж</h3><div data-form></div></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ===== Footer ===== -->
+<footer class="border-t border-white/10 py-8 text-sm text-slate-400">
+  <div class="wrap flex flex-wrap justify-between gap-4">
+    <span>© 2026 ГККП «Колледж искусств и дизайна им. А. Кастеева»</span>
+    <a class="hover:text-gold2" href="https://instagram.com/shhk.kasteev" target="_blank" rel="noopener">Instagram @shhk.kasteev</a>
+  </div>
+</footer>
+
+<!-- ===== Модальное окно «Подать заявку» ===== -->
+<dialog id="apply" aria-labelledby="apply-title" class="m-auto max-h-[calc(100%-2rem)] w-[min(30rem,calc(100%-2rem))] overflow-auto rounded-3xl border border-white/10 bg-night p-0 text-slate-100 backdrop:bg-black/70 backdrop:backdrop-blur-sm">
+  <div class="relative p-7">
+    <button id="close" class="absolute right-3 top-3 grid h-10 w-10 place-items-center rounded-full bg-white/10 hover:bg-white/20" aria-label="Закрыть"><i data-lucide="x" class="h-5 w-5"></i></button>
+    <h2 id="apply-title" class="text-2xl font-extrabold">Подать заявку</h2>
+    <p class="mb-5 mt-2 text-sm text-slate-400">Оставьте контакты — приёмная комиссия свяжется с вами.</p>
+    <div data-form></div>
+  </div>
+</dialog>
+
+<script>
+/* ===== Данные: редактируйте контент здесь ===== */
+const SLIDES = [
+  ['palette', 'Раскрой свой творческий потенциал', 'ГККП «Колледж искусств и дизайна имени А. Кастеева» в Шымкенте — место, где талант становится профессией.'],
+  ['award', 'Обучение у лучших мастеров Казахстана', 'В преподавательском составе — члены Союза художников РК. Колледж имени А. Кастеева, Шымкент.'],
+  ['compass', 'Твой путь в мир дизайна и искусства', 'Пять направлений: от графики и моды до интерьера и скульптуры. Колледж имени А. Кастеева.']
+];
+/* Новости-заглушки: замените своими [категория, заголовок, дата, описание] */
+const NEWS = [
+  ['Выставка', 'Выставка работ студентов', '12 сентября 2026', 'Курсовые и дипломные работы всех отделений в выставочном зале колледжа.'],
+  ['Конкурс', 'Городской конкурс плаката', '20 сентября 2026', 'Студенты графического отделения представят плакаты на тему родного города.'],
+  ['Анонс', 'День открытых дверей', '5 октября 2026', 'Познакомьтесь с мастерскими и преподавателями и покажите своё портфолио.'],
+  ['Выставка', 'Ярмарка изделий народных промыслов', '18 октября 2026', 'Изделия студентов отделения декоративно-прикладного искусства.'],
+  ['Анонс', 'Набор на новый учебный год', '1 ноября 2026', 'Приёмная комиссия консультирует абитуриентов по телефону и лично.']
+];
+const STATS = [['50+', 'лет опыта'], ['10 000+', 'выпускников'], ['95%', 'трудоустройства'], ['Союз', 'художников РК среди преподавателей']];
+const MAJORS = [
+  ['pen-tool', 'Графический дизайн', 'Айдентика, плакат, книжная и цифровая иллюстрация.', 'Художник-дизайнер'],
+  ['shirt', 'Дизайн одежды и текстиля', 'Проектирование коллекций, работа с тканью и принтом.', 'Художник-модельер'],
+  ['brush', 'Живопись и скульптура', 'Академическая школа, работа в мастерской и с материалом.', 'Художник-живописец'],
+  ['sparkles', 'Декоративно-прикладное искусство', 'Традиционные ремёсла, орнамент и современные изделия.', 'Художник-мастер'],
+  ['armchair', 'Дизайн интерьера и архитектура', 'Планировка, визуализация и проектирование пространства.', 'Дизайнер интерьера']
+];
+const STEPS = [['file-text', 'Подача документов', 'Принесите документы в приёмную комиссию или оставьте заявку на сайте.'], ['brush', 'Творческий экзамен', 'Покажите портфолио и выполните творческое задание.'], ['graduation-cap', 'Зачисление', 'Обучение на государственном гранте или по договору.']];
+const ADV = [['hammer', 'Оборудованные мастерские', 'Студенты работают руками в профессиональных мастерских.'], ['landmark', 'Выставочные залы', 'Работы студентов выставляются в залах колледжа.'], ['briefcase', 'Практика и трудоустройство', 'Практика на реальных проектах и помощь в поиске работы.']];
+
+/* ===== Помощники ===== */
+const $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const dots = (el, n) => el.innerHTML = Array.from({ length: n }, (_, i) => `<button class="dot" data-i="${i}" aria-label="Слайд ${i + 1}"></button>`).join('');
+
+/* ===== Рендер секций ===== */
+$('#stats').innerHTML = STATS.map(([v, l]) => `<div class="glass rounded-3xl p-5"><b class="block bg-gradient-to-r from-gold to-gold2 bg-clip-text text-3xl font-extrabold text-transparent sm:text-4xl">${v}</b><span class="mt-1 block text-sm text-slate-400">${l}</span></div>`).join('');
+$('#majorGrid').innerHTML = MAJORS.map(([ic, t, d, q]) => `<article class="glass rounded-3xl p-6 transition duration-300 hover:-translate-y-1 hover:border-gold/60"><div class="mb-5 grid h-12 w-12 place-items-center rounded-2xl bg-gradient-to-br from-gold to-gold2 text-ink"><i data-lucide="${ic}" class="h-6 w-6"></i></div><h3 class="text-lg font-bold">${t}</h3><p class="mt-2 text-sm text-slate-400">${d}</p><span class="mt-4 inline-block rounded-full border border-gold/40 px-3 py-1 text-xs text-gold">${q}</span></article>`).join('');
+$('#steps').innerHTML = STEPS.map(([ic, t, d], i) => `${i ? '<i data-lucide="arrow-right" class="hidden self-center text-gold md:block"></i>' : ''}<div class="glass rounded-3xl p-6"><div class="mb-4 flex items-center gap-3"><span class="grid h-9 w-9 place-items-center rounded-full bg-gradient-to-br from-gold to-gold2 font-extrabold text-ink">${i + 1}</span><i data-lucide="${ic}" class="h-5 w-5 text-gold"></i></div><h3 class="font-bold">${t}</h3><p class="mt-2 text-sm text-slate-400">${d}</p></div>`).join('');
+$('#advGrid').innerHTML = ADV.map(([ic, t, d]) => `<div class="glass rounded-3xl p-6"><i data-lucide="${ic}" class="mb-4 h-7 w-7 text-gold"></i><h3 class="font-bold">${t}</h3><p class="mt-2 text-sm text-slate-400">${d}</p></div>`).join('');
+$('#slides').innerHTML = SLIDES.map(([ic, t, s], i) => `<div class="slide grid items-center gap-10 transition-opacity duration-700 md:grid-cols-[1.5fr_1fr]" style="grid-area:1/1" role="group" aria-label="Слайд ${i + 1}"><div><h1 class="text-4xl font-extrabold leading-tight sm:text-6xl">${t}</h1><p class="mt-5 max-w-xl text-lg text-slate-300">${s}</p><div class="mt-8 flex flex-wrap gap-3"><button data-open class="rounded-full bg-gradient-to-r from-gold to-gold2 px-7 py-3 font-bold text-ink transition hover:brightness-110">Подать заявку</button><a href="#majors" class="rounded-full border border-white/30 px-7 py-3 font-bold transition hover:border-gold">Специальности</a></div></div><div class="hidden place-items-center md:grid"><div class="glass grid h-60 w-60 place-items-center rounded-full"><i data-lucide="${ic}" class="h-24 w-24 text-gold2" stroke-width="1.2"></i></div></div></div>`).join('');
+$('#track').innerHTML = NEWS.map(([c, t, d, x]) => `<div class="shrink-0 basis-[85%] snap-start pr-4 sm:basis-1/2 lg:basis-1/3"><article class="glass h-full rounded-3xl p-6"><span class="rounded-full border border-gold/40 px-3 py-1 text-xs text-gold">${c}</span><h3 class="mt-4 text-lg font-bold">${t}</h3><p class="mt-1 text-xs text-slate-500">${d}</p><p class="mt-3 text-sm text-slate-400">${x}</p></article></div>`).join('');
+
+/* ===== Формы (один шаблон для модального окна и раздела «Контакты») ===== */
+const F = 'w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-slate-100 outline-none focus:border-gold';
+const FORM = `<form class="grid gap-3">
+  <label class="grid gap-1.5 text-sm text-slate-400">Имя<input name="name" required autocomplete="name" class="${F}"></label>
+  <label class="grid gap-1.5 text-sm text-slate-400">Телефон<input name="phone" type="tel" required autocomplete="tel" placeholder="+7" class="${F}"></label>
+  <label class="grid gap-1.5 text-sm text-slate-400">Специальность<select name="major" class="${F}">${MAJORS.map(m => `<option class="bg-night">${m[1]}</option>`).join('')}</select></label>
+  <label class="grid gap-1.5 text-sm text-slate-400">Сообщение<textarea name="msg" rows="3" class="${F}"></textarea></label>
+  <button class="rounded-full bg-gradient-to-r from-gold to-gold2 px-7 py-3 font-bold text-ink transition hover:brightness-110">Отправить</button></form>`;
+$$('[data-form]').forEach(b => b.innerHTML = FORM);
+$$('form').forEach(f => f.addEventListener('submit', e => {
+  e.preventDefault();
+  // TODO: отправьте данные на сервер: new FormData(f)
+  f.outerHTML = '<p role="status" class="rounded-2xl border border-gold/50 bg-gold/10 p-5">Спасибо! Мы получили сообщение и свяжемся с вами по указанному телефону.</p>';
+}));
+
+/* ===== Мобильное меню ===== */
+const nav = $('#nav'), burger = $('#burger');
+const setMenu = open => {
+  nav.classList.toggle('hidden', !open); nav.classList.toggle('flex', open);
+  burger.setAttribute('aria-expanded', open);
+  burger.innerHTML = `<i data-lucide="${open ? 'x' : 'menu'}"></i>`; lucide.createIcons();
+};
+burger.onclick = () => setMenu(nav.classList.contains('hidden'));
+$$('#nav a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+
+/* ===== Модальное окно ===== */
+const dlg = $('#apply');
+document.addEventListener('click', e => {
+  if (e.target.closest('[data-open]')) { setMenu(false); dlg.showModal(); }
+});
+$('#close').onclick = () => dlg.close();
+dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });
+
+/* ===== Hero-слайдер: смена каждые 3 секунды ===== */
+let cur = 0, timer;
+const slides = $$('.slide'), hDots = $('#dots');
+dots(hDots, slides.length);
+const go = n => {
+  cur = (n + slides.length) % slides.length;
+  slides.forEach((s, i) => { s.classList.toggle('opacity-0', i !== cur); s.classList.toggle('pointer-events-none', i !== cur); s.inert = i !== cur; });
+  $$('.dot', hDots).forEach((d, i) => d.setAttribute('aria-current', i === cur));
+};
+const play = () => { clearInterval(timer); if (!reduce) timer = setInterval(() => go(cur + 1), 3000); };
+$('#prev').onclick = () => { go(cur - 1); play(); };
+$('#next').onclick = () => { go(cur + 1); play(); };
+hDots.addEventListener('click', e => { if (e.target.dataset.i) { go(+e.target.dataset.i); play(); } });
+const hero = $('#hero');
+hero.addEventListener('mouseenter', () => clearInterval(timer));
+hero.addEventListener('mouseleave', play);
+hero.addEventListener('focusin', () => clearInterval(timer));
+hero.addEventListener('focusout', play);
+go(0); play();
+
+/* ===== Карусель новостей ===== */
+const track = $('#track'), nDots = $('#ndots');
+dots(nDots, NEWS.length);
+const step = () => track.firstElementChild.offsetWidth;
+const maxScroll = () => track.scrollWidth - track.clientWidth;
+const nMove = dir => {
+  const left = track.scrollLeft;
+  track.scrollTo({ left: dir > 0 ? (left >= maxScroll() - 4 ? 0 : left + step()) : (left <= 4 ? maxScroll() : left - step()), behavior: 'smooth' });
+};
+track.addEventListener('scroll', () => {
+  const i = track.scrollLeft >= maxScroll() - 4 ? NEWS.length - 1 : Math.round(track.scrollLeft / step());
+  $$('.dot', nDots).forEach((d, k) => d.setAttribute('aria-current', k === i));
+}, { passive: true });
+let nTimer;
+const nPlay = () => { clearInterval(nTimer); if (!reduce) nTimer = setInterval(() => nMove(1), 4500); };
+$('#nprev').onclick = () => { nMove(-1); nPlay(); };
+$('#nnext').onclick = () => { nMove(1); nPlay(); };
+nDots.addEventListener('click', e => { if (e.target.dataset.i) { track.scrollTo({ left: +e.target.dataset.i * step(), behavior: 'smooth' }); nPlay(); } });
+['mouseenter', 'focusin', 'touchstart'].forEach(ev => track.addEventListener(ev, () => clearInterval(nTimer), { passive: true }));
+['mouseleave', 'focusout'].forEach(ev => track.addEventListener(ev, nPlay));
+nPlay(); track.dispatchEvent(new Event('scroll'));
+
+/* ===== Иконки Lucide ===== */
+lucide.createIcons();
+</script>
+</body>
+</html>
